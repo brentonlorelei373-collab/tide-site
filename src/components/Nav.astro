@@ -1,0 +1,96 @@
+---
+const navLinks = [
+  { label: '产品', href: '/#products' },
+  { label: '关于', href: '/about' },
+  { label: '博客', href: '/blog' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav
+  class="fixed top-0 left-0 right-0 z-50 bg-[rgba(255,255,255,0.72)] saturate-[180%] backdrop-blur-[20px]"
+>
+  <div class="max-w-[980px] mx-auto px-6 h-12 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="text-[21px] font-semibold tracking-tight text-[var(--color-primary)] hover:opacity-80 transition-opacity">
+      Tide
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'text-xs tracking-wide transition-colors',
+              currentPath === link.href
+                ? 'text-[var(--color-primary)] font-medium'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-primary)]',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden flex flex-col gap-[5px] p-2 -mr-2"
+      aria-label="菜单"
+    >
+      <span class="block w-[18px] h-[1.5px] bg-[var(--color-primary)] transition-transform origin-center" id="bar1"></span>
+      <span class="block w-[18px] h-[1.5px] bg-[var(--color-primary)] transition-opacity" id="bar2"></span>
+      <span class="block w-[18px] h-[1.5px] bg-[var(--color-primary)] transition-transform origin-center" id="bar3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden overflow-hidden bg-[rgba(255,255,255,0.98)] border-t border-[var(--color-border-light)]"
+  >
+    <div class="max-w-[980px] mx-auto px-6 py-4 flex flex-col gap-4">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors py-1"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer to prevent content from being hidden behind fixed nav -->
+<div class="h-12"></div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  let isOpen = false;
+
+  btn?.addEventListener('click', () => {
+    isOpen = !isOpen;
+    menu?.classList.toggle('hidden');
+
+    if (isOpen) {
+      bar1!.style.transform = 'rotate(45deg) translate(2.5px, 2.5px)';
+      bar2!.style.opacity = '0';
+      bar3!.style.transform = 'rotate(-45deg) translate(2.5px, -2.5px)';
+    } else {
+      bar1!.style.transform = '';
+      bar2!.style.opacity = '1';
+      bar3!.style.transform = '';
+    }
+  });
+</script>

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="关于" description="了解 Tide — 我们相信，科技应当回归纯粹。">
+
+  <!-- Hero -->
+  <section class="bg-[var(--color-bg)]">
+    <div class="max-w-[680px] mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight text-[var(--color-primary)] animate-fade-up">
+        关于 Tide
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl text-[var(--color-text-secondary)] leading-relaxed animate-fade-up-delay-1">
+        我们相信，真正的创新<br />
+        来自对复杂的化简。
+      </p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="bg-[var(--color-bg-secondary)]">
+    <div class="max-w-[680px] mx-auto px-6 py-20 md:py-28">
+      <div class="space-y-12">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
+            我们的理念
+          </h2>
+          <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
+            Tide 诞生于一个简单的信念：科技产品应当像水一样 —— 无形，却无处不在；安静，却力量无穷。我们拒绝不必要的复杂性，专注于打造直觉化的体验。
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
+            设计哲学
+          </h2>
+          <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
+            少即是多。每一个像素、每一次交互、每一行代码，都经过反复推敲。我们追求的不是功能的堆砌，而是体验的纯粹。当你使用 Tide 的产品时，你不会注意到设计 —— 因为它已经融入了你的直觉。
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
+            技术信仰
+          </h2>
+          <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
+            我们坚信开放、透明、隐私至上。Tide 的基础设施部署在全球边缘网络，确保每一位用户都能获得毫秒级的响应体验。技术应当为人服务，而不是反过来。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="bg-white">
+    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[var(--color-primary)] text-center mb-16">
+        核心价值
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          { num: '01', title: '极简', desc: '删繁就简，直达本质。' },
+          { num: '02', title: '品质', desc: '每个细节都值得苛求。' },
+          { num: '03', title: '隐私', desc: '用户数据，神圣不可侵犯。' },
+          { num: '04', title: '开放', desc: '拥抱社区，共建生态。' },
+        ].map((value) => (
+          <div class="text-center md:text-left">
+            <span class="text-xs font-mono text-[var(--color-text-tertiary)]">{value.num}</span>
+            <h3 class="mt-2 text-xl font-semibold text-[var(--color-primary)]">{value.title}</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-secondary)]">{value.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[var(--color-bg-secondary)] border-t border-[var(--color-border-light)]">
+    <div class="max-w-[680px] mx-auto px-6 py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)]">
+        一起创造些什么
+      </h2>
+      <p class="mt-3 text-base text-[var(--color-text-secondary)]">
+        如果你也相信简洁的力量，欢迎联系我们。
+      </p>
+      <div class="mt-6">
+        <a
+          href="mailto:hello@tide.dev"
+          class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-[var(--color-accent)] text-white text-sm font-medium hover:bg-[var(--color-accent-hover)] transition-colors"
+        >
+          联系我们
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

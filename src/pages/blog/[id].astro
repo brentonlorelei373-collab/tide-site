@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+
+  <article class="bg-[var(--color-bg)]">
+    <!-- Header -->
+    <div class="max-w-[680px] mx-auto px-6 pt-20 pb-8 md:pt-28">
+      <a
+        href="/blog"
+        class="inline-flex items-center text-sm text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors mb-8"
+      >
+        ← 返回博客
+      </a>
+      <time class="block text-xs text-[var(--color-text-tertiary)] font-mono">
+        {post.data.date.toLocaleDateString('zh-CN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </time>
+      <h1 class="mt-3 text-3xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)] leading-tight">
+        {post.data.title}
+      </h1>
+      {post.data.description && (
+        <p class="mt-4 text-lg text-[var(--color-text-secondary)]">
+          {post.data.description}
+        </p>
+      )}
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-[680px] mx-auto px-6 pb-20 md:pb-28">
+      <div class="prose prose-lg max-w-none
+        prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-[var(--color-primary)]
+        prose-p:text-[var(--color-text-secondary)] prose-p:leading-relaxed
+        prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-[var(--color-primary)]
+        prose-code:text-sm prose-code:bg-[var(--color-bg-secondary)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+        prose-pre:bg-[#1d1d1f] prose-pre:rounded-2xl
+        prose-img:rounded-2xl
+        prose-blockquote:border-l-[var(--color-accent)] prose-blockquote:text-[var(--color-text-secondary)]
+      ">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+</Layout>
