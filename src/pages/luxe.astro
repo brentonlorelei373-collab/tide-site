@@ -7,36 +7,42 @@ const products = [
     desc: '意大利植鞣头层小牛皮，手工缝线',
     price: '¥4,999',
     badge: '限量 100 件',
+    img: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Luxe Denim Jacket',
     desc: '日本冈山 14oz 赤耳丹宁，原色',
     price: '¥2,999',
     badge: '限量 200 件',
+    img: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Luxe Cashmere Hoodie',
     desc: '蒙古 A 级山羊绒，双层针织',
     price: '¥3,599',
     badge: '限量 150 件',
+    img: 'https://images.unsplash.com/photo-1614975059251-992f11792571?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Luxe Cargo Pants',
     desc: '日本 Cordura 面料，定制金属扣',
     price: '¥1,999',
     badge: '限量 300 件',
+    img: 'https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Luxe Down Parka',
     desc: '800蓬鹅绒填充，Gore-Tex 外层',
     price: '¥5,999',
     badge: '限量 80 件',
+    img: 'https://images.unsplash.com/photo-1544923246-77307dd270cb?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Luxe Silk Shirt',
     desc: '苏州双面真丝，珍珠母贝纽扣',
     price: '¥1,699',
     badge: '限量 200 件',
+    img: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80&auto=format&fit=crop',
   },
 ];
 ---
@@ -44,8 +50,17 @@ const products = [
 <Layout title="Tide Luxe" description="Tide Luxe — 街头基因与高级时装的碰撞。限量发售，独立编号。">
 
   <!-- Hero -->
-  <section class="bg-[var(--color-bg-dark)]">
-    <div class="max-w-[980px] mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-20 text-center">
+  <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1400&q=80&auto=format&fit=crop"
+        alt=""
+        class="w-full h-full object-cover opacity-30"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80"></div>
+    </div>
+    <div class="relative max-w-[980px] mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-20 text-center">
       <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4 animate-fade-up">
         Product Line 02
       </p>
@@ -68,8 +83,40 @@ const products = [
     </div>
   </section>
 
-  <!-- Craftsmanship -->
+  <!-- Key Visual -->
   <section class="bg-[var(--color-bg-dark)]">
+    <div class="max-w-[980px] mx-auto px-6 py-16 md:py-24">
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80&auto=format&fit=crop"
+            alt="Luxe Lookbook 1"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&q=80&auto=format&fit=crop"
+            alt="Luxe Lookbook 2"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=600&q=80&auto=format&fit=crop"
+            alt="Luxe Lookbook 3"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship -->
+  <section class="bg-[#0a0a0a]">
     <div class="max-w-[980px] mx-auto px-6 py-16 md:py-24">
       <div class="grid md:grid-cols-3 gap-12">
         <div class="text-center">
@@ -110,7 +157,7 @@ const products = [
   </section>
 
   <!-- Products Grid -->
-  <section class="bg-[#0a0a0a]">
+  <section class="bg-[var(--color-bg-dark)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
       <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-white text-center mb-12">
         本季单品
@@ -119,9 +166,14 @@ const products = [
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
           <div class="group bg-[#111] rounded-2xl overflow-hidden hover:bg-[#1a1a1a] transition-colors">
-            <div class="aspect-square bg-[#0d0d0d] flex items-center justify-center relative">
-              <div class="w-24 h-24 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-600/10 group-hover:scale-110 transition-transform"></div>
-              <span class="absolute top-4 right-4 text-[10px] tracking-widest uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full">
+            <div class="aspect-square overflow-hidden relative">
+              <img
+                src={product.img}
+                alt={product.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <span class="absolute top-4 right-4 text-[10px] tracking-widest uppercase text-amber-400 bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full">
                 {product.badge}
               </span>
             </div>
@@ -140,8 +192,16 @@ const products = [
   </section>
 
   <!-- CTA -->
-  <section class="bg-[var(--color-bg-dark)]">
-    <div class="max-w-[680px] mx-auto px-6 py-16 md:py-24 text-center">
+  <section class="relative bg-[#0a0a0a] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1400&q=80&auto=format&fit=crop"
+        alt=""
+        class="w-full h-full object-cover opacity-10"
+        loading="lazy"
+      />
+    </div>
+    <div class="relative max-w-[680px] mx-auto px-6 py-16 md:py-24 text-center">
       <h2 class="text-2xl md:text-3xl font-semibold text-white">
         优先购买权
       </h2>

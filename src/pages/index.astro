@@ -6,14 +6,24 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ===== Hero Section ===== -->
   <section class="relative overflow-hidden bg-[var(--color-bg-dark)]">
-    <div class="max-w-[980px] mx-auto px-6 pt-24 pb-20 md:pt-40 md:pb-32 text-center">
-      <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-6 animate-fade-up">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80&auto=format&fit=crop"
+        alt="TIDE Brand"
+        class="w-full h-full object-cover opacity-40"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black"></div>
+    </div>
+    <div class="relative max-w-[980px] mx-auto px-6 pt-28 pb-24 md:pt-44 md:pb-36 text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-6 animate-fade-up">
         2026 Spring / Summer Collection
       </p>
       <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white animate-fade-up-delay-1">
         TIDE
       </h1>
-      <p class="mt-4 text-lg md:text-xl text-gray-400 font-light animate-fade-up-delay-2">
+      <p class="mt-4 text-lg md:text-xl text-gray-300 font-light animate-fade-up-delay-2">
         潮流不追随。潮流由你定义。
       </p>
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">
@@ -25,7 +35,7 @@ import Layout from '../layouts/Layout.astro';
         </a>
         <a
           href="/luxe"
-          class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full border border-gray-600 text-gray-300 text-sm font-medium hover:bg-white hover:text-black transition-all"
+          class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full border border-gray-500 text-gray-200 text-sm font-medium hover:bg-white hover:text-black transition-all"
         >
           探索 Luxe
         </a>
@@ -65,11 +75,15 @@ import Layout from '../layouts/Layout.astro';
             </a>
           </div>
         </div>
-        <div class="relative aspect-[4/5] rounded-3xl bg-[var(--color-bg-secondary)] overflow-hidden flex items-center justify-center">
-          <div class="text-center">
-            <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-b from-gray-200 to-gray-300 mb-4"></div>
-            <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Essential</p>
-            <p class="text-[80px] font-extralight text-gray-200 leading-none mt-2">01</p>
+        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800&q=80&auto=format&fit=crop"
+            alt="Tide Essential — 极简系列"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+            <p class="text-xs tracking-[0.2em] uppercase text-white/80">Essential Collection</p>
           </div>
         </div>
       </div>
@@ -80,11 +94,15 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-[var(--color-bg-dark)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-32">
       <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div class="order-2 md:order-1 relative aspect-[4/5] rounded-3xl bg-[#111] overflow-hidden flex items-center justify-center">
-          <div class="text-center">
-            <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-b from-amber-400 to-amber-600 mb-4"></div>
-            <p class="text-xs tracking-[0.2em] uppercase text-gray-500">Luxe</p>
-            <p class="text-[80px] font-extralight text-gray-800 leading-none mt-2">02</p>
+        <div class="order-2 md:order-1 relative aspect-[4/5] rounded-3xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=800&q=80&auto=format&fit=crop"
+            alt="Tide Luxe — 奢华系列"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+            <p class="text-xs tracking-[0.2em] uppercase text-amber-400/90">Luxe Collection</p>
           </div>
         </div>
         <div class="order-1 md:order-2">
@@ -119,8 +137,28 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ===== Lookbook Strip ===== -->
+  <section class="bg-[var(--color-bg)] overflow-hidden">
+    <div class="py-16 md:py-24">
+      <h2 class="text-center text-xs tracking-[0.3em] uppercase text-[var(--color-text-tertiary)] mb-8">Lookbook</h2>
+      <div class="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scrollbar-hide">
+        {[
+          { src: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 1" },
+          { src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 2" },
+          { src: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 3" },
+          { src: "https://images.unsplash.com/photo-1581044777550-4cfa60707998?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 4" },
+          { src: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 5" },
+        ].map((img) => (
+          <div class="flex-shrink-0 w-[280px] md:w-[320px] aspect-[3/4] rounded-2xl overflow-hidden snap-center">
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Brand Values ===== -->
-  <section class="bg-[var(--color-bg)]">
+  <section class="bg-[var(--color-bg-secondary)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
@@ -164,8 +202,8 @@ import Layout from '../layouts/Layout.astro';
             desc: '生于街头，忠于自我。TIDE 从城市文化中汲取灵感，为独立个体发声。',
           },
         ].map((feature) => (
-          <div class="group p-6 rounded-2xl hover:bg-[var(--color-bg-secondary)] transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-[var(--color-bg-secondary)] group-hover:bg-white flex items-center justify-center mb-4 transition-colors">
+          <div class="group p-6 rounded-2xl hover:bg-white transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-white group-hover:bg-[var(--color-bg-secondary)] flex items-center justify-center mb-4 transition-colors">
               <svg class="w-5 h-5 text-[var(--color-text-secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <Fragment set:html={feature.icon} />
               </svg>
@@ -183,8 +221,16 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ===== CTA Section ===== -->
-  <section class="bg-[var(--color-bg-dark)]">
-    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28 text-center">
+  <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=80&auto=format&fit=crop"
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+        loading="lazy"
+      />
+    </div>
+    <div class="relative max-w-[980px] mx-auto px-6 py-20 md:py-28 text-center">
       <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-4">Newsletter</p>
       <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-white">
         加入 TIDE 社群

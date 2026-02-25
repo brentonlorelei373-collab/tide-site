@@ -5,8 +5,17 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="关于" description="了解 TIDE — 生于街头，忠于设计。极简与奢华，两种态度，一个品牌。">
 
   <!-- Hero -->
-  <section class="bg-[var(--color-bg-dark)]">
-    <div class="max-w-[680px] mx-auto px-6 pt-24 pb-16 md:pt-36 md:pb-24 text-center">
+  <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&q=80&auto=format&fit=crop"
+        alt=""
+        class="w-full h-full object-cover opacity-30"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90"></div>
+    </div>
+    <div class="relative max-w-[680px] mx-auto px-6 pt-24 pb-16 md:pt-36 md:pb-24 text-center">
       <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-6 animate-fade-up">Our Story</p>
       <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white animate-fade-up-delay-1">
         生于街头。<br />忠于设计。
@@ -18,9 +27,23 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Full-width Image -->
+  <section class="bg-[var(--color-bg)]">
+    <div class="max-w-[980px] mx-auto px-6 py-16 md:py-24">
+      <div class="aspect-[21/9] rounded-3xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1400&q=80&auto=format&fit=crop"
+          alt="TIDE 工作室"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
   <!-- Brand Story -->
   <section class="bg-[var(--color-bg)]">
-    <div class="max-w-[680px] mx-auto px-6 py-20 md:py-28">
+    <div class="max-w-[680px] mx-auto px-6 pb-20 md:pb-28">
       <div class="space-y-14">
         <div>
           <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Chapter 01</span>
@@ -30,6 +53,32 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
             TIDE 诞生于 2024 年的深圳。创始人在街头文化与高级时装之间看到了一片空白地带 —— 有些人追求极致的简洁，有些人渴望大胆的奢华，但没有一个品牌能同时满足这两种截然不同的审美。TIDE 由此而生，以「双线并行」的理念，为两种态度的人提供同等精致的选择。
           </p>
+        </div>
+
+        <!-- Two Line Images -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-[3/4] rounded-2xl overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=600&q=80&auto=format&fit=crop"
+              alt="Essential 极简"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+              <p class="text-xs tracking-[0.15em] uppercase text-white font-medium">Essential</p>
+            </div>
+          </div>
+          <div class="aspect-[3/4] rounded-2xl overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80&auto=format&fit=crop"
+              alt="Luxe 奢华"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+              <p class="text-xs tracking-[0.15em] uppercase text-amber-400 font-medium">Luxe</p>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -102,8 +151,16 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA -->
-  <section class="bg-[var(--color-bg-dark)]">
-    <div class="max-w-[680px] mx-auto px-6 py-20 md:py-28 text-center">
+  <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=80&auto=format&fit=crop"
+        alt=""
+        class="w-full h-full object-cover opacity-15"
+        loading="lazy"
+      />
+    </div>
+    <div class="relative max-w-[680px] mx-auto px-6 py-20 md:py-28 text-center">
       <h2 class="text-2xl md:text-3xl font-semibold text-white">
         合作洽谈
       </h2>

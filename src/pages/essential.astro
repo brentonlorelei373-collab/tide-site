@@ -6,37 +6,37 @@ const products = [
     name: 'Essential Tee',
     desc: '260g 重磅有机棉，落肩剪裁',
     price: '¥299',
-    color: 'bg-gray-100',
+    img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Essential Hoodie',
     desc: '480g 毛圈面料，宽松廓形',
     price: '¥599',
-    color: 'bg-gray-200',
+    img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Essential Pants',
     desc: '弹力斜纹棉，锥形裤型',
     price: '¥499',
-    color: 'bg-gray-100',
+    img: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Essential Jacket',
     desc: '再生尼龙，防风防泼水',
     price: '¥899',
-    color: 'bg-gray-200',
+    img: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Essential Shorts',
     desc: '速干再生涤纶，隐藏口袋',
     price: '¥349',
-    color: 'bg-gray-100',
+    img: 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&q=80&auto=format&fit=crop',
   },
   {
     name: 'Essential Longsleeve',
     desc: '300g 华夫格织纹，修身版型',
     price: '¥359',
-    color: 'bg-gray-200',
+    img: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80&auto=format&fit=crop',
   },
 ];
 ---
@@ -44,8 +44,16 @@ const products = [
 <Layout title="Tide Essential" description="Tide Essential — 回归本质的极简美学。有机面料，去性别化设计，衣橱的基石。">
 
   <!-- Hero -->
-  <section class="bg-[var(--color-bg)]">
-    <div class="max-w-[980px] mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-20 text-center">
+  <section class="relative bg-[var(--color-bg)] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1400&q=80&auto=format&fit=crop"
+        alt=""
+        class="w-full h-full object-cover opacity-10"
+        loading="eager"
+      />
+    </div>
+    <div class="relative max-w-[980px] mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-20 text-center">
       <p class="text-xs tracking-[0.3em] uppercase text-[var(--color-text-tertiary)] mb-4 animate-fade-up">
         Product Line 01
       </p>
@@ -68,12 +76,36 @@ const products = [
     </div>
   </section>
 
-  <!-- Details -->
+  <!-- Key Visual -->
   <section class="bg-[var(--color-bg)]">
+    <div class="max-w-[980px] mx-auto px-6 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1434389677669-e08b4cda3a7a?w=800&q=80&auto=format&fit=crop"
+            alt="Essential Lookbook"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=800&q=80&auto=format&fit=crop"
+            alt="Essential Detail"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="bg-[var(--color-bg-secondary)]">
     <div class="max-w-[980px] mx-auto px-6 py-16 md:py-24">
       <div class="grid md:grid-cols-3 gap-12">
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-[var(--color-bg-secondary)] flex items-center justify-center mb-4">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-[var(--color-text-secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -84,7 +116,7 @@ const products = [
           </p>
         </div>
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-[var(--color-bg-secondary)] flex items-center justify-center mb-4">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-[var(--color-text-secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" />
             </svg>
@@ -95,7 +127,7 @@ const products = [
           </p>
         </div>
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-[var(--color-bg-secondary)] flex items-center justify-center mb-4">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-[var(--color-text-secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
             </svg>
@@ -110,7 +142,7 @@ const products = [
   </section>
 
   <!-- Products Grid -->
-  <section class="bg-[var(--color-bg-secondary)]">
+  <section class="bg-[var(--color-bg)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
       <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-[var(--color-primary)] text-center mb-12">
         全系单品
@@ -118,9 +150,14 @@ const products = [
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
-          <div class="group bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-            <div class={`aspect-square ${product.color} flex items-center justify-center`}>
-              <div class="w-24 h-24 rounded-full bg-white/60 group-hover:scale-110 transition-transform"></div>
+          <div class="group bg-[var(--color-bg-secondary)] rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="aspect-square overflow-hidden">
+              <img
+                src={product.img}
+                alt={product.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
             </div>
             <div class="p-5">
               <h3 class="text-base font-semibold text-[var(--color-primary)]">{product.name}</h3>
@@ -137,7 +174,7 @@ const products = [
   </section>
 
   <!-- CTA -->
-  <section class="bg-[var(--color-bg)]">
+  <section class="bg-[var(--color-bg-secondary)]">
     <div class="max-w-[680px] mx-auto px-6 py-16 md:py-24 text-center">
       <h2 class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)]">
         首发通知
