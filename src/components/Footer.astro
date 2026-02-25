@@ -3,14 +3,14 @@ const year = new Date().getFullYear();
 
 const footerLinks = [
   {
-    title: '产品',
+    title: '产品系列',
     links: [
-      { label: '概览', href: '/#products' },
-      { label: '特性', href: '/#features' },
+      { label: 'Tide Essential', href: '/essential' },
+      { label: 'Tide Luxe', href: '/luxe' },
     ],
   },
   {
-    title: '公司',
+    title: '品牌',
     links: [
       { label: '关于我们', href: '/about' },
       { label: '博客', href: '/blog' },
@@ -19,23 +19,22 @@ const footerLinks = [
   {
     title: '联系',
     links: [
-      { label: 'GitHub', href: 'https://github.com' },
-      { label: 'Email', href: 'mailto:hello@tide.dev' },
+      { label: 'Instagram', href: 'https://instagram.com' },
+      { label: 'Email', href: 'mailto:hello@tide.fashion' },
     ],
   },
 ];
 ---
 
 <footer class="bg-[var(--color-bg-secondary)] border-t border-[var(--color-border-light)]">
-  <!-- Links Section -->
   <div class="max-w-[980px] mx-auto px-6 pt-10 pb-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
       <!-- Brand -->
       <div class="col-span-2 md:col-span-1">
-        <a href="/" class="text-lg font-semibold text-[var(--color-primary)]">Tide</a>
+        <a href="/" class="text-lg font-semibold tracking-widest text-[var(--color-primary)]">TIDE</a>
         <p class="mt-2 text-xs text-[var(--color-text-tertiary)] leading-relaxed">
-          极简设计。<br />
-          极致体验。
+          潮流不追随。<br />
+          潮流由你定义。
         </p>
       </div>
 
@@ -65,14 +64,13 @@ const footerLinks = [
     </div>
   </div>
 
-  <!-- Bottom Bar -->
   <div class="border-t border-[var(--color-border-light)]">
     <div class="max-w-[980px] mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
       <p class="text-xs text-[var(--color-text-tertiary)]">
-        Copyright &copy; {year} Tide. All rights reserved.
+        &copy; {year} TIDE. All rights reserved.
       </p>
       <p class="text-xs text-[var(--color-text-tertiary)]">
-        Crafted with precision.
+        Born in the streets. Refined by design.
       </p>
     </div>
   </div>

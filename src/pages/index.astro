@@ -2,140 +2,166 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Tide" description="Minimal. Powerful. Effortless. — 让科技回归纯粹。">
+<Layout title="TIDE" description="TIDE — 潮流不追随。极简与奢华，两种态度，一个品牌。">
 
   <!-- ===== Hero Section ===== -->
-  <section class="relative overflow-hidden bg-[var(--color-bg)]">
-    <div class="max-w-[980px] mx-auto px-6 pt-20 pb-16 md:pt-32 md:pb-24 text-center">
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-[var(--color-primary)] animate-fade-up">
-        Tide
+  <section class="relative overflow-hidden bg-[var(--color-bg-dark)]">
+    <div class="max-w-[980px] mx-auto px-6 pt-24 pb-20 md:pt-40 md:pb-32 text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-6 animate-fade-up">
+        2026 Spring / Summer Collection
+      </p>
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white animate-fade-up-delay-1">
+        TIDE
       </h1>
-      <p class="mt-4 text-xl md:text-2xl font-medium text-[var(--color-text-secondary)] animate-fade-up-delay-1">
-        Minimal. Powerful. Effortless.
+      <p class="mt-4 text-lg md:text-xl text-gray-400 font-light animate-fade-up-delay-2">
+        潮流不追随。潮流由你定义。
       </p>
-      <p class="mt-2 text-base md:text-lg text-[var(--color-text-tertiary)] animate-fade-up-delay-2">
-        让科技回归纯粹
-      </p>
-      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">
         <a
-          href="#products"
-          class="inline-flex items-center justify-center min-w-[140px] px-7 py-3 rounded-full bg-[var(--color-accent)] text-white text-sm font-medium hover:bg-[var(--color-accent-hover)] transition-colors"
+          href="/essential"
+          class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors"
         >
-          了解更多
+          探索 Essential
         </a>
         <a
-          href="/about"
-          class="inline-flex items-center justify-center min-w-[140px] px-7 py-3 rounded-full border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-medium hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+          href="/luxe"
+          class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full border border-gray-600 text-gray-300 text-sm font-medium hover:bg-white hover:text-black transition-all"
         >
-          关于我们
+          探索 Luxe
         </a>
       </div>
     </div>
-    <!-- Gradient Orb -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-100/40 via-purple-50/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
   </section>
 
-  <!-- ===== Products Section ===== -->
-  <section id="products" class="bg-[var(--color-bg-secondary)]">
-    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
-          产品
-        </h2>
-        <p class="mt-4 text-lg text-[var(--color-text-secondary)]">
-          以极简之美，驱动无限可能。
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Product Card 1 -->
-        <div class="group relative rounded-3xl bg-white p-10 md:p-14 overflow-hidden transition-shadow hover:shadow-lg">
-          <div class="relative z-10">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-2">
-              Tide Studio
-            </h3>
-            <p class="text-[var(--color-text-secondary)] text-base leading-relaxed mb-6">
-              为创作者打造的下一代工作空间。<br />
-              简洁的界面，强大的内核。
-            </p>
-            <a href="#" class="link-apple text-sm font-medium">
-              进一步了解 →
+  <!-- ===== Essential Line ===== -->
+  <section class="bg-[var(--color-bg)]">
+    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-32">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div>
+          <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Product Line 01</span>
+          <h2 class="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
+            Tide Essential
+          </h2>
+          <p class="mt-4 text-base text-[var(--color-text-secondary)] leading-relaxed">
+            回归本质的极简美学。纯粹的剪裁、克制的色彩、无可挑剔的面料。Essential 系列为那些懂得「少即是多」的人而生 —— 每一件单品都是衣橱的基石。
+          </p>
+          <ul class="mt-6 space-y-2">
+            <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+              <span class="w-1 h-1 rounded-full bg-[var(--color-primary)]"></span>
+              100% 有机棉 & 再生纤维面料
+            </li>
+            <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+              <span class="w-1 h-1 rounded-full bg-[var(--color-primary)]"></span>
+              黑、白、灰、藏青四色基础色盘
+            </li>
+            <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+              <span class="w-1 h-1 rounded-full bg-[var(--color-primary)]"></span>
+              去性别化版型设计
+            </li>
+          </ul>
+          <div class="mt-8">
+            <a href="/essential" class="link-apple text-sm font-medium">
+              浏览 Essential 系列 →
             </a>
           </div>
         </div>
-
-        <!-- Product Card 2 -->
-        <div class="group relative rounded-3xl bg-[var(--color-bg-dark)] p-10 md:p-14 overflow-hidden transition-shadow hover:shadow-lg">
-          <div class="relative z-10">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-              </svg>
-            </div>
-            <h3 class="text-2xl md:text-3xl font-semibold text-white mb-2">
-              Tide Cloud
-            </h3>
-            <p class="text-gray-400 text-base leading-relaxed mb-6">
-              无边界的云端基础设施。<br />
-              全球部署，毫秒级响应。
-            </p>
-            <a href="#" class="text-[var(--color-accent)] hover:underline text-sm font-medium">
-              进一步了解 →
-            </a>
+        <div class="relative aspect-[4/5] rounded-3xl bg-[var(--color-bg-secondary)] overflow-hidden flex items-center justify-center">
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-b from-gray-200 to-gray-300 mb-4"></div>
+            <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Essential</p>
+            <p class="text-[80px] font-extralight text-gray-200 leading-none mt-2">01</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Features Section ===== -->
-  <section id="features" class="bg-white">
+  <!-- ===== Luxe Line ===== -->
+  <section class="bg-[var(--color-bg-dark)]">
+    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-32">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div class="order-2 md:order-1 relative aspect-[4/5] rounded-3xl bg-[#111] overflow-hidden flex items-center justify-center">
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-b from-amber-400 to-amber-600 mb-4"></div>
+            <p class="text-xs tracking-[0.2em] uppercase text-gray-500">Luxe</p>
+            <p class="text-[80px] font-extralight text-gray-800 leading-none mt-2">02</p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="text-xs tracking-[0.2em] uppercase text-gray-500">Product Line 02</span>
+          <h2 class="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-white">
+            Tide Luxe
+          </h2>
+          <p class="mt-4 text-base text-gray-400 leading-relaxed">
+            街头基因与高级时装的碰撞。大胆的廓形、考究的工艺、稀有的材质。Luxe 系列不为迎合而生 —— 它是态度的宣言，是穿在身上的艺术。
+          </p>
+          <ul class="mt-6 space-y-2">
+            <li class="flex items-center gap-3 text-sm text-gray-400">
+              <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+              意大利头层小牛皮 & 日本丹宁
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-400">
+              <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+              限量发售，每季不超过 500 件
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-400">
+              <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+              独立编号，附带品牌鉴证卡
+            </li>
+          </ul>
+          <div class="mt-8">
+            <a href="/luxe" class="text-amber-400 hover:underline text-sm font-medium">
+              浏览 Luxe 系列 →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Brand Values ===== -->
+  <section class="bg-[var(--color-bg)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
-          为什么选择 Tide
+          TIDE 的态度
         </h2>
         <p class="mt-4 text-lg text-[var(--color-text-secondary)]">
-          每一个细节，都经过深思熟虑。
+          不只是衣服，是一种生活方式。
         </p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
           {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
-            title: '极致性能',
-            desc: '毫秒级响应，流畅如丝。我们对每一帧都精雕细琢。',
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />`,
-            title: '隐私优先',
-            desc: '你的数据属于你。端到端加密，零追踪。',
-          },
-          {
             icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />`,
-            title: '极简设计',
-            desc: '去除一切冗余，只留下你真正需要的。',
+            title: '极简剪裁',
+            desc: '每一条线都有它存在的理由。没有多余的装饰，只有恰到好处的结构与比例。',
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />`,
+            title: '匠心面料',
+            desc: '从日本今治毛巾布到意大利 Loro Piana 羊绒，我们只选择世界上最好的面料。',
           },
           {
             icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
-            title: '全球化',
-            desc: '200+ 边缘节点，让你的用户在全球任何角落都能极速访问。',
+            title: '可持续时尚',
+            desc: 'Essential 系列全线使用有机与再生面料。时尚不应该以地球为代价。',
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />`,
+            title: '限量发售',
+            desc: 'Luxe 系列每季限量生产。我们不做快时尚，因为真正的好东西值得等待。',
           },
           {
             icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
-            title: '开发者友好',
-            desc: '优雅的 API、完善的文档、活跃的社区。',
+            title: '去性别化',
+            desc: '衣服不应该定义你。Essential 全系列采用去性别化设计，穿着由你做主。',
           },
           {
             icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
-            title: '用心打造',
-            desc: '每一行代码都倾注匠心。品质，不妥协。',
+            title: '街头精神',
+            desc: '生于街头，忠于自我。TIDE 从城市文化中汲取灵感，为独立个体发声。',
           },
         ].map((feature) => (
           <div class="group p-6 rounded-2xl hover:bg-[var(--color-bg-secondary)] transition-colors">
@@ -159,19 +185,22 @@ import Layout from '../layouts/Layout.astro';
   <!-- ===== CTA Section ===== -->
   <section class="bg-[var(--color-bg-dark)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28 text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-4">Newsletter</p>
       <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-white">
-        准备好了吗？
+        加入 TIDE 社群
       </h2>
-      <p class="mt-4 text-lg text-gray-400 max-w-md mx-auto">
-        加入 Tide，体验科技的纯粹之美。
+      <p class="mt-4 text-base text-gray-400 max-w-md mx-auto">
+        第一时间获取新品发售、限量 Drop 及独家活动信息。
       </p>
-      <div class="mt-8">
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[var(--color-primary)] text-sm font-medium hover:bg-gray-100 transition-colors"
-        >
-          立即开始
-        </a>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          class="w-full sm:flex-1 px-5 py-3 rounded-full bg-[#1a1a1a] border border-gray-700 text-white text-sm placeholder:text-gray-500 focus:outline-none focus:border-gray-500 transition-colors"
+        />
+        <button class="w-full sm:w-auto px-8 py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors">
+          订阅
+        </button>
       </div>
     </div>
   </section>
