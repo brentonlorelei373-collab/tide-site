@@ -4,87 +4,71 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="TIDE" description="TIDE — 潮流不追随。极简与奢华，两种态度，一个品牌。">
 
-  <!-- ===== Hero Section ===== -->
-  <section class="relative overflow-hidden bg-[var(--color-bg-dark)]">
-    <!-- Hero Background Image -->
+  <!-- ===== Hero ===== -->
+  <section class="relative overflow-hidden bg-[var(--color-bg-dark)] min-h-[90vh] flex items-center">
     <div class="absolute inset-0">
       <img
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80&auto=format&fit=crop"
         alt="TIDE Brand"
-        class="w-full h-full object-cover opacity-40"
+        class="w-full h-full object-cover opacity-35"
         loading="eager"
       />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/80"></div>
     </div>
-    <div class="relative max-w-[980px] mx-auto px-6 pt-28 pb-24 md:pt-44 md:pb-36 text-center">
+    <div class="relative max-w-[980px] mx-auto px-6 py-32 text-center">
       <p class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-6 animate-fade-up">
-        2026 Spring / Summer Collection
+        2026 Spring / Summer
       </p>
-      <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white animate-fade-up-delay-1">
+      <h1 class="text-7xl md:text-9xl font-bold tracking-tighter text-white animate-fade-up-delay-1">
         TIDE
       </h1>
-      <p class="mt-4 text-lg md:text-xl text-gray-300 font-light animate-fade-up-delay-2">
+      <p class="mt-6 text-lg md:text-xl text-gray-300 font-light max-w-md mx-auto animate-fade-up-delay-2">
         潮流不追随。潮流由你定义。
       </p>
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">
-        <a
-          href="/essential"
-          class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors"
-        >
-          探索 Essential
+      <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">
+        <a href="/essential" class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors">
+          Essential 系列
         </a>
-        <a
-          href="/luxe"
-          class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full border border-gray-500 text-gray-200 text-sm font-medium hover:bg-white hover:text-black transition-all"
-        >
-          探索 Luxe
+        <a href="/luxe" class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full border border-gray-500 text-gray-200 text-sm font-medium hover:bg-white hover:text-black transition-all">
+          Luxe 系列
         </a>
       </div>
+    </div>
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
     </div>
   </section>
 
   <!-- ===== Essential Line ===== -->
   <section class="bg-[var(--color-bg)]">
-    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-32">
-      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <div class="max-w-[980px] mx-auto px-6 py-24 md:py-36">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div>
-          <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Product Line 01</span>
-          <h2 class="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
-            Tide Essential
+          <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">01 — Essential</span>
+          <h2 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
+            回归本质的<br/>极简美学
           </h2>
-          <p class="mt-4 text-base text-[var(--color-text-secondary)] leading-relaxed">
-            回归本质的极简美学。纯粹的剪裁、克制的色彩、无可挑剔的面料。Essential 系列为那些懂得「少即是多」的人而生 —— 每一件单品都是衣橱的基石。
+          <p class="mt-6 text-base text-[var(--color-text-secondary)] leading-relaxed">
+            纯粹的剪裁、克制的色彩、无可挑剔的面料。Essential 系列为那些懂得「少即是多」的人而生。
           </p>
-          <ul class="mt-6 space-y-2">
-            <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
-              <span class="w-1 h-1 rounded-full bg-[var(--color-primary)]"></span>
-              100% 有机棉 & 再生纤维面料
-            </li>
-            <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
-              <span class="w-1 h-1 rounded-full bg-[var(--color-primary)]"></span>
-              黑、白、灰、藏青四色基础色盘
-            </li>
-            <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
-              <span class="w-1 h-1 rounded-full bg-[var(--color-primary)]"></span>
-              去性别化版型设计
-            </li>
+          <ul class="mt-6 space-y-3">
+            {['100% 有机棉 & 再生纤维面料', '黑、白、灰、藏青四色基础色盘', '去性别化版型，S—3XL'].map(item => (
+              <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+                <span class="w-1 h-1 rounded-full bg-[var(--color-primary)] flex-shrink-0"></span>
+                {item}
+              </li>
+            ))}
           </ul>
-          <div class="mt-8">
-            <a href="/essential" class="link-apple text-sm font-medium">
-              浏览 Essential 系列 →
-            </a>
-          </div>
+          <a href="/essential" class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)] hover:underline underline-offset-4">
+            浏览 Essential 系列
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
-        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800&q=80&auto=format&fit=crop"
-            alt="Tide Essential — 极简系列"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
-            <p class="text-xs tracking-[0.2em] uppercase text-white/80">Essential Collection</p>
-          </div>
+        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800&q=80&auto=format&fit=crop" alt="Tide Essential" class="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </div>
@@ -92,65 +76,53 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ===== Luxe Line ===== -->
   <section class="bg-[var(--color-bg-dark)]">
-    <div class="max-w-[980px] mx-auto px-6 py-20 md:py-32">
-      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div class="order-2 md:order-1 relative aspect-[4/5] rounded-3xl overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=800&q=80&auto=format&fit=crop"
-            alt="Tide Luxe — 奢华系列"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
-            <p class="text-xs tracking-[0.2em] uppercase text-amber-400/90">Luxe Collection</p>
-          </div>
+    <div class="max-w-[980px] mx-auto px-6 py-24 md:py-36">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div class="order-2 md:order-1 relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=800&q=80&auto=format&fit=crop" alt="Tide Luxe" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="order-1 md:order-2">
-          <span class="text-xs tracking-[0.2em] uppercase text-gray-500">Product Line 02</span>
-          <h2 class="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-white">
-            Tide Luxe
+          <span class="text-xs tracking-[0.2em] uppercase text-gray-500">02 — Luxe</span>
+          <h2 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-white">
+            街头基因与<br/>高级时装的碰撞
           </h2>
-          <p class="mt-4 text-base text-gray-400 leading-relaxed">
-            街头基因与高级时装的碰撞。大胆的廓形、考究的工艺、稀有的材质。Luxe 系列不为迎合而生 —— 它是态度的宣言，是穿在身上的艺术。
+          <p class="mt-6 text-base text-gray-400 leading-relaxed">
+            大胆的廓形、考究的工艺、稀有的材质。Luxe 不为迎合而生 —— 它是态度的宣言。
           </p>
-          <ul class="mt-6 space-y-2">
-            <li class="flex items-center gap-3 text-sm text-gray-400">
-              <span class="w-1 h-1 rounded-full bg-amber-400"></span>
-              意大利头层小牛皮 & 日本丹宁
-            </li>
-            <li class="flex items-center gap-3 text-sm text-gray-400">
-              <span class="w-1 h-1 rounded-full bg-amber-400"></span>
-              限量发售，每季不超过 500 件
-            </li>
-            <li class="flex items-center gap-3 text-sm text-gray-400">
-              <span class="w-1 h-1 rounded-full bg-amber-400"></span>
-              独立编号，附带品牌鉴证卡
-            </li>
+          <ul class="mt-6 space-y-3">
+            {['意大利头层小牛皮 & 日本丹宁', '每季限量，独立编号', '附品牌鉴证卡'].map(item => (
+              <li class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>
+                {item}
+              </li>
+            ))}
           </ul>
-          <div class="mt-8">
-            <a href="/luxe" class="text-amber-400 hover:underline text-sm font-medium">
-              浏览 Luxe 系列 →
-            </a>
-          </div>
+          <a href="/luxe" class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-amber-400 hover:underline underline-offset-4">
+            浏览 Luxe 系列
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Lookbook Strip ===== -->
-  <section class="bg-[var(--color-bg)] overflow-hidden">
-    <div class="py-16 md:py-24">
-      <h2 class="text-center text-xs tracking-[0.3em] uppercase text-[var(--color-text-tertiary)] mb-8">Lookbook</h2>
-      <div class="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scrollbar-hide">
+  <!-- ===== Lookbook ===== -->
+  <section class="bg-[var(--color-bg)]">
+    <div class="py-20 md:py-28">
+      <div class="max-w-[980px] mx-auto px-6 mb-10">
+        <h2 class="text-xs tracking-[0.3em] uppercase text-[var(--color-text-tertiary)]">Lookbook</h2>
+      </div>
+      <div class="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory" style="scrollbar-width: none; -ms-overflow-style: none;">
         {[
-          { src: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 1" },
-          { src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 2" },
-          { src: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 3" },
-          { src: "https://images.unsplash.com/photo-1581044777550-4cfa60707998?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 4" },
-          { src: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80&auto=format&fit=crop", alt: "Lookbook 5" },
-        ].map((img) => (
-          <div class="flex-shrink-0 w-[280px] md:w-[320px] aspect-[3/4] rounded-2xl overflow-hidden snap-center">
-            <img src={img.src} alt={img.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=500&q=80&auto=format&fit=crop",
+        ].map((src, i) => (
+          <div class="flex-shrink-0 w-[260px] md:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden snap-center">
+            <img src={src} alt={`Lookbook ${i + 1}`} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
           </div>
         ))}
       </div>
@@ -164,89 +136,45 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[var(--color-primary)]">
           TIDE 的态度
         </h2>
-        <p class="mt-4 text-lg text-[var(--color-text-secondary)]">
-          不只是衣服，是一种生活方式。
-        </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />`,
-            title: '极简剪裁',
-            desc: '每一条线都有它存在的理由。没有多余的装饰，只有恰到好处的结构与比例。',
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />`,
-            title: '匠心面料',
-            desc: '从日本今治毛巾布到意大利 Loro Piana 羊绒，我们只选择世界上最好的面料。',
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
-            title: '可持续时尚',
-            desc: 'Essential 系列全线使用有机与再生面料。时尚不应该以地球为代价。',
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />`,
-            title: '限量发售',
-            desc: 'Luxe 系列每季限量生产。我们不做快时尚，因为真正的好东西值得等待。',
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
-            title: '去性别化',
-            desc: '衣服不应该定义你。Essential 全系列采用去性别化设计，穿着由你做主。',
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
-            title: '街头精神',
-            desc: '生于街头，忠于自我。TIDE 从城市文化中汲取灵感，为独立个体发声。',
-          },
-        ].map((feature) => (
-          <div class="group p-6 rounded-2xl hover:bg-white transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-white group-hover:bg-[var(--color-bg-secondary)] flex items-center justify-center mb-4 transition-colors">
-              <svg class="w-5 h-5 text-[var(--color-text-secondary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <Fragment set:html={feature.icon} />
-              </svg>
-            </div>
-            <h3 class="text-base font-semibold text-[var(--color-primary)] mb-1">
-              {feature.title}
-            </h3>
-            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              {feature.desc}
-            </p>
+          { title: '极简剪裁', desc: '每一条线都有存在的理由。没有多余的装饰，只有恰到好处的结构与比例。' },
+          { title: '匠心面料', desc: '从日本今治毛巾布到意大利 Loro Piana 羊绒，只选世界上最好的面料。' },
+          { title: '可持续时尚', desc: 'Essential 全线使用有机与再生面料。时尚不应该以地球为代价。' },
+          { title: '限量发售', desc: 'Luxe 每季限量生产。我们不做快时尚，真正的好东西值得等待。' },
+          { title: '去性别化', desc: '衣服不应该定义你。Essential 全系列去性别化设计，穿着由你做主。' },
+          { title: '街头精神', desc: '生于街头，忠于自我。从城市文化中汲取灵感，为独立个体发声。' },
+        ].map((f) => (
+          <div class="p-6 rounded-2xl bg-white">
+            <h3 class="text-base font-semibold text-[var(--color-primary)] mb-2">{f.title}</h3>
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">{f.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA Section ===== -->
+  <!-- ===== CTA ===== -->
   <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
     <div class="absolute inset-0">
-      <img
-        src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=80&auto=format&fit=crop"
-        alt=""
-        class="w-full h-full object-cover opacity-20"
-        loading="lazy"
-      />
+      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-15" loading="lazy" />
     </div>
-    <div class="relative max-w-[980px] mx-auto px-6 py-20 md:py-28 text-center">
-      <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-4">Newsletter</p>
+    <div class="relative max-w-[680px] mx-auto px-6 py-24 md:py-32 text-center">
       <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-white">
-        加入 TIDE 社群
+        联系我们
       </h2>
       <p class="mt-4 text-base text-gray-400 max-w-md mx-auto">
-        第一时间获取新品发售、限量 Drop 及独家活动信息。
+        买手店合作、品牌联名、媒体采访，或只是想聊聊。
       </p>
-      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-        <input
-          type="email"
-          placeholder="your@email.com"
-          class="w-full sm:flex-1 px-5 py-3 rounded-full bg-[#1a1a1a] border border-gray-700 text-white text-sm placeholder:text-gray-500 focus:outline-none focus:border-gray-500 transition-colors"
-        />
-        <button class="w-full sm:w-auto px-8 py-3 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors">
-          订阅
-        </button>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="mailto:hello@tide.fashion" class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors">
+          发送邮件
+        </a>
+        <a href="/about" class="inline-flex items-center justify-center min-w-[160px] px-8 py-3.5 rounded-full border border-gray-600 text-gray-300 text-sm font-medium hover:bg-white hover:text-black transition-all">
+          了解品牌故事
+        </a>
       </div>
     </div>
   </section>

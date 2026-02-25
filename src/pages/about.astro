@@ -7,74 +7,51 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero -->
   <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
     <div class="absolute inset-0">
-      <img
-        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&q=80&auto=format&fit=crop"
-        alt=""
-        class="w-full h-full object-cover opacity-30"
-        loading="eager"
-      />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90"></div>
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-25" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/90"></div>
     </div>
-    <div class="relative max-w-[680px] mx-auto px-6 pt-24 pb-16 md:pt-36 md:pb-24 text-center">
+    <div class="relative max-w-[680px] mx-auto px-6 pt-28 pb-20 md:pt-40 md:pb-28 text-center">
       <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-6 animate-fade-up">Our Story</p>
       <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white animate-fade-up-delay-1">
         生于街头。<br />忠于设计。
       </h1>
       <p class="mt-6 text-lg text-gray-400 leading-relaxed animate-fade-up-delay-2">
-        TIDE 不是一个追逐潮流的品牌。<br />
-        我们是潮流本身。
+        TIDE 不是一个追逐潮流的品牌。我们是潮流本身。
       </p>
     </div>
   </section>
 
-  <!-- Full-width Image -->
+  <!-- Wide Image -->
   <section class="bg-[var(--color-bg)]">
     <div class="max-w-[980px] mx-auto px-6 py-16 md:py-24">
       <div class="aspect-[21/9] rounded-3xl overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1400&q=80&auto=format&fit=crop"
-          alt="TIDE 工作室"
-          class="w-full h-full object-cover"
-          loading="lazy"
-        />
+        <img src="https://images.unsplash.com/photo-1467043237213-65f2da53396f?w=1400&q=80&auto=format&fit=crop" alt="TIDE 工作室" class="w-full h-full object-cover" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- Brand Story -->
+  <!-- Story -->
   <section class="bg-[var(--color-bg)]">
     <div class="max-w-[680px] mx-auto px-6 pb-20 md:pb-28">
       <div class="space-y-14">
         <div>
           <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Chapter 01</span>
-          <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
-            起源
-          </h2>
+          <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">起源</h2>
           <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
             TIDE 诞生于 2024 年的深圳。创始人在街头文化与高级时装之间看到了一片空白地带 —— 有些人追求极致的简洁，有些人渴望大胆的奢华，但没有一个品牌能同时满足这两种截然不同的审美。TIDE 由此而生，以「双线并行」的理念，为两种态度的人提供同等精致的选择。
           </p>
         </div>
 
-        <!-- Two Line Images -->
+        <!-- Two Lines -->
         <div class="grid grid-cols-2 gap-4">
           <div class="aspect-[3/4] rounded-2xl overflow-hidden relative">
-            <img
-              src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=600&q=80&auto=format&fit=crop"
-              alt="Essential 极简"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=600&q=80&auto=format&fit=crop" alt="Essential" class="w-full h-full object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
               <p class="text-xs tracking-[0.15em] uppercase text-white font-medium">Essential</p>
             </div>
           </div>
           <div class="aspect-[3/4] rounded-2xl overflow-hidden relative">
-            <img
-              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80&auto=format&fit=crop"
-              alt="Luxe 奢华"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80&auto=format&fit=crop" alt="Luxe" class="w-full h-full object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
               <p class="text-xs tracking-[0.15em] uppercase text-amber-400 font-medium">Luxe</p>
             </div>
@@ -83,11 +60,9 @@ import Layout from '../layouts/Layout.astro';
 
         <div>
           <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Chapter 02</span>
-          <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
-            两条线，一个态度
-          </h2>
+          <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">两条线，一个态度</h2>
           <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
-            <strong class="text-[var(--color-primary)]">Tide Essential</strong> 是减法的艺术。黑白灰的基础色盘，有机棉与再生纤维，去性别化的版型 —— 给那些相信「穿衣不需要思考」的人。每一件 Essential 单品都可以闭眼搭配，因为好的基础款不需要说明书。
+            <strong class="text-[var(--color-primary)]">Tide Essential</strong> 是减法的艺术。黑白灰的基础色盘，有机棉与再生纤维，去性别化的版型 —— 给那些相信「穿衣不需要思考」的人。
           </p>
           <p class="mt-4 text-base text-[var(--color-text-secondary)] leading-relaxed">
             <strong class="text-[var(--color-primary)]">Tide Luxe</strong> 是加法的勇气。意大利小牛皮、日本丹宁、定制五金 —— 给那些认为「衣服是态度的延伸」的人。每季限量不超过 500 件，独立编号，是穿在身上的收藏品。
@@ -96,35 +71,30 @@ import Layout from '../layouts/Layout.astro';
 
         <div>
           <span class="text-xs tracking-[0.2em] uppercase text-[var(--color-text-tertiary)]">Chapter 03</span>
-          <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
-            可持续承诺
-          </h2>
+          <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">可持续承诺</h2>
           <p class="text-base text-[var(--color-text-secondary)] leading-relaxed">
-            我们拒绝快时尚的逻辑。Essential 系列全线使用有机与再生面料，包装采用 FSC 认证再生纸。Luxe 系列坚持小批量生产，宁可售罄也不过度制造。我们相信，时尚的未来应该是负责任的 —— 对穿着者负责，对地球负责。
+            我们拒绝快时尚的逻辑。Essential 全线使用有机与再生面料，包装采用 FSC 认证再生纸。Luxe 坚持小批量生产，宁可售罄也不过度制造。时尚的未来应该是负责任的。
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Brand Values -->
+  <!-- Values -->
   <section class="bg-[var(--color-bg-secondary)]">
     <div class="max-w-[980px] mx-auto px-6 py-20 md:py-28">
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[var(--color-primary)] text-center mb-16">
-        品牌基因
-      </h2>
-
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[var(--color-primary)] text-center mb-16">品牌基因</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
           { num: '01', title: '独立', desc: '不跟风，不迎合。TIDE 只忠于自己的审美。' },
           { num: '02', title: '品质', desc: '从面料到车缝，每个环节都有我们的偏执。' },
           { num: '03', title: '可持续', desc: '快时尚的反面。我们做少，但做到最好。' },
           { num: '04', title: '包容', desc: '没有性别标签，没有年龄界限。穿 TIDE，做自己。' },
-        ].map((value) => (
+        ].map((v) => (
           <div class="text-center md:text-left">
-            <span class="text-xs font-mono text-[var(--color-text-tertiary)]">{value.num}</span>
-            <h3 class="mt-2 text-xl font-semibold text-[var(--color-primary)]">{value.title}</h3>
-            <p class="mt-2 text-sm text-[var(--color-text-secondary)]">{value.desc}</p>
+            <span class="text-xs font-mono text-[var(--color-text-tertiary)]">{v.num}</span>
+            <h3 class="mt-2 text-xl font-semibold text-[var(--color-primary)]">{v.title}</h3>
+            <p class="mt-2 text-sm text-[var(--color-text-secondary)]">{v.desc}</p>
           </div>
         ))}
       </div>
@@ -140,10 +110,10 @@ import Layout from '../layouts/Layout.astro';
           { num: '2', label: '产品线' },
           { num: '12+', label: '合作门店' },
           { num: '100%', label: 'Essential 可持续面料' },
-        ].map((stat) => (
+        ].map((s) => (
           <div>
-            <p class="text-3xl md:text-4xl font-semibold text-[var(--color-primary)]">{stat.num}</p>
-            <p class="mt-1 text-sm text-[var(--color-text-tertiary)]">{stat.label}</p>
+            <p class="text-3xl md:text-4xl font-semibold text-[var(--color-primary)]">{s.num}</p>
+            <p class="mt-1 text-sm text-[var(--color-text-tertiary)]">{s.label}</p>
           </div>
         ))}
       </div>
@@ -153,28 +123,14 @@ import Layout from '../layouts/Layout.astro';
   <!-- CTA -->
   <section class="relative bg-[var(--color-bg-dark)] overflow-hidden">
     <div class="absolute inset-0">
-      <img
-        src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=80&auto=format&fit=crop"
-        alt=""
-        class="w-full h-full object-cover opacity-15"
-        loading="lazy"
-      />
+      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-12" loading="lazy" />
     </div>
     <div class="relative max-w-[680px] mx-auto px-6 py-20 md:py-28 text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white">
-        合作洽谈
-      </h2>
-      <p class="mt-3 text-base text-gray-400">
-        买手店合作、品牌联名、媒体采访，欢迎联系我们。
-      </p>
-      <div class="mt-6">
-        <a
-          href="mailto:hello@tide.fashion"
-          class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors"
-        >
-          hello@tide.fashion
-        </a>
-      </div>
+      <h2 class="text-2xl md:text-3xl font-semibold text-white">合作洽谈</h2>
+      <p class="mt-3 text-base text-gray-400">买手店合作、品牌联名、媒体采访，欢迎联系我们。</p>
+      <a href="mailto:hello@tide.fashion" class="mt-6 inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-200 transition-colors">
+        hello@tide.fashion
+      </a>
     </div>
   </section>
 
